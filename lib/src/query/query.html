@@ -1,0 +1,30 @@
+<div class="header">
+  <span class="title">Jaguar Falcor showcase</span>
+
+  <div class="header-menus">
+    <span (click)="showAllData = true"><a>View all data</a></span>
+    <span><a>Github</a></span>
+  </div>
+</div>
+
+<div class="container">
+  <pre class="output" [class.error]="!status">{{output}}</pre>
+
+  <div class="query-container">
+    <div class="controls">
+      <button>Clear</button>
+    </div>
+    <div class="query-txt-container">
+      <textarea #query (keyup)="fetch($event.target.value)">{{queryTxt}}</textarea>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <span>From <a href="https://jaguar-dart.github.io">Jaguar</a> developers</span>
+</div>
+
+<div class="all-data" *ngIf="showAllData">
+  <pre class="output" style="margin: 0px;">{{allDataStr}}</pre>
+  <div class="close" (click)="showAllData = false">X</div>
+</div>

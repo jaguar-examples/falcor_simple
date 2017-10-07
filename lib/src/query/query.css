@@ -1,0 +1,129 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.header {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #cacaca;
+}
+
+.header .title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    padding: 0px 10px;
+    width: 150px;
+    color: #d83131;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+}
+
+.header .header-menus span {
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.header .header-menus span a {
+    text-decoration: none;
+    color: #868686;
+    outline: none;
+    transition: color 0.5s ease-in;
+}
+
+.header .header-menus span:hover a {
+    color: #d83131;
+}
+
+.footer {
+    font-size: 16px;
+    text-align: right;
+    padding: 0px 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 70px);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.output {
+    flex: 1;
+    height: 100%;
+    margin: 0px;
+    margin-right: 5px;
+    border: 1px solid black;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.output.error {
+    border: 1px solid red;
+}
+
+.query-container {
+    flex: 1;
+    height: 100%;
+}
+
+.controls {
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+.controls button {
+    height: 25px;
+}
+
+.query-txt-container {
+    width: calc(100% - 5px);
+    height: calc(100% - 40px);
+    flex: 1;
+}
+
+.query-container textarea {
+    width: 100%;
+    height: 100%;
+    font-size: inherit;
+}
+
+.all-data {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: white;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.all-data .close {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    background-color: white;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+}
+
+.all-data .close:hover {
+    color: red;
+}
