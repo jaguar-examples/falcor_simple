@@ -25,7 +25,23 @@ String formatJSON(json, [int indent = 0]) =>
 class QueryComponent implements OnInit {
   final TodoListService service;
 
-  String queryTxt = '''todos[:].{name,done}''';
+  final String fieldFilter = '''
+todos[:].{
+  name,
+  done,
+}''';
+
+  final String arrayIndex = '''
+todos[1]''';
+
+  final String nested = '''
+todos[:].{
+  name,
+  done,
+  author[1].{
+    name,
+  }
+}''';
 
   String output = '';
 
@@ -33,7 +49,7 @@ class QueryComponent implements OnInit {
 
   @override
   Future<Null> ngOnInit() async {
-    await fetch(queryTxt);
+    await fetch(fieldFilter);
   }
 
   bool status = false;
